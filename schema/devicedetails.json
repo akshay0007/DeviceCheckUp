@@ -1,0 +1,27 @@
+{
+    "TableName": "devicedetails",
+    "KeySchema": [
+      {
+        "AttributeName": "deviceid",
+        "KeyType": "HASH"
+      },
+      {
+        "AttributeName": "model",
+        "KeyType": "SK"
+      }
+    ],
+    "AttributeDefinitions": [
+      {
+        "AttributeName": "deviceid",
+        "AttributeType": "S"
+      },
+      {
+        "AttributeName": "model",
+        "AttributeType": "S"
+      }
+    ],
+    "ProvisionedThroughput": {
+      "ReadCapacityUnits": 5,
+      "WriteCapacityUnits": 5
+    }
+  }
