@@ -1,0 +1,23 @@
+1) Design a Serverless solution for a system that receives data feeds continuously from IoT devices in the field with the following shape (JSON):
+{
+    "deviceid" : "96543150-c695-4fdb-89cf-749abfb305b7",
+    "temperature" : 54.98,
+    "humidity" : 32.43,
+    "model" : "Series-V",
+    "timestamp" : "2021-02-01T21:12:09Z",
+
+    "sensors" : [ "LIDAR", "THERMAL" ],
+    "position" : {
+        "latitude" : 47.615694,
+        "longitude" : -122.3359976
+    }
+}
+2) System will receive data via exposed REST API POST /v1/feeds
+3) System needs to persist data in DynamoDB table
+4) System needs to send notification when payload includes "THERMAL" sensor
+
+AWS Services to use:
+- API Gateway
+- Lambda
+- DynamoDB
+- SNS
